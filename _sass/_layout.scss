@@ -1,236 +1,494 @@
-/**
- * Site header
- */
-.site-header {
-    border-top: 5px solid $grey-color-dark;
-    border-bottom: 1px solid $grey-color-light;
-    min-height: 56px;
-
-    // Positioning context for the mobile navigation icon
-    position: relative;
+#logo
+{
+  width: 145px;
+  height: 140px;
+  background: url(../gfx/logo.png) no-repeat;
+  margin: 40px;
 }
 
-.site-title {
-    font-size: 26px;
-    line-height: 56px;
-    letter-spacing: -1px;
-    margin-bottom: 0;
-    float: left;
-
-    &,
-    &:visited {
-        color: $grey-color-dark;
-    }
+h1
+{
+  font-family: MyriadProCondBold;
+  font-size: 24px;
+  margin-left: 40px;
+  float: left;
 }
 
-.site-nav {
-    float: right;
-    line-height: 56px;
+h1 span
+{
+  font-weight: normal;
+  color: #727272;
+  font-family: MyriadProCondRegular;
+}
 
-    .menu-icon {
-        display: none;
-    }
+nav ul
+{
+  list-style: none;
+}
 
-    .page-link {
-        color: $text-color;
-        line-height: $base-line-height;
+nav
+{
+  width: 130px;
+  top: 52%;
+  position: fixed;
+}
 
-        // Gaps between nav items, but not on the first one
-        &:not(:first-child) {
-            margin-left: 20px;
-        }
-    }
+nav ul li a
+{
+  float: left;
+  text-decoration: none;
+}
+nav ul li a span
+{
+  color: #fff;
+  font-size: 22px;
+  background: #000;
+  width: 130px;
+  display: block;
+  text-align: right;
+  margin-top: 1px;
+  padding: 4px 15px 0 0;
+}
 
-    @include media-query($on-palm) {
-        position: absolute;
-        top: 9px;
-        right: 30px;
-        background-color: $background-color;
-        border: 1px solid $grey-color-light;
-        border-radius: 5px;
-        text-align: right;
+nav ul li a.active > span,
+nav ul li a:hover > span
+{
+  margin-left: 40px;
+}
 
-        .menu-icon {
-            display: block;
-            float: right;
-            width: 36px;
-            height: 26px;
-            line-height: 0;
-            padding-top: 10px;
-            text-align: center;
+nav ul li a.active > span strong
+{
+  font-family: MyriadProCondBold;
+}
 
-            > svg {
-                width: 18px;
-                height: 15px;
+section
+{
+  margin: 0 auto 40px;
+  width: 60%;
+  padding-left: 100px;
+}
 
-                path {
-                    fill: $grey-color-dark;
-                }
-            }
-        }
+section article
+{
+  overflow: hidden;
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #e7e7e7;
+}
 
-        .trigger {
-            clear: both;
-            display: none;
-        }
+section article aside
+{
+  float: left;
+}
 
-        &:hover .trigger {
-            display: block;
-            padding-bottom: 5px;
-        }
+section article aside span
+{
+  -webkit-transform:rotate(90deg);
+  -moz-transform:rotate(90deg);
+  -o-transform: rotate(90deg);
+  color: #727272;
+  display: block;
+  white-space: nowrap;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
 
-        .page-link {
-            display: block;
-            padding: 5px 10px;
-        }
-    }
+section article aside time
+{
+  background: #e7e7e7;
+  color: #fff;
+  width: 50px;
+  height: 140px;
+  display: block;
+  text-align: center;
+  float: left;
+  font-size: 32px;
+  line-height: 6em;
+  padding: 20px 0;
+}
+
+section article aside time:first-line
+{
+  line-height: 1em;
+}
+
+section article header
+{
+  font-size: 38px;
+}
+
+section article header a
+{
+ text-decoration: none;
+ color: #000;
+}
+
+section article p.tags
+{
+  margin-bottom: 30px;
+}
+
+section article p.tags a
+{
+  color: #b5b5b5;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+section article .content
+{
+  width: 90%;
+  float: left;
+}
+
+section article p
+{
+  font-size: 14px;
+  text-align: justify;
+  font-family: MyriadPro;
+  line-height: 1.5em;
+}
+
+section article p,
+section article header
+{
+  float: left;
+  width: 88%;
+  margin-left: 4%;
+}
+
+section article footer
+{
+  width: 90%;
+  float: right;
+  margin-top: 20px;
+}
+
+section article footer a
+{
+  font-family: MyriadPro;
+  color: #000;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+section #pagination
+{
+  text-align: center;
+}
+
+section #pagination ul
+{
+  list-style: none;
+}
+
+section #pagination ul li
+{
+  display: inline-block;
+}
+
+section #pagination ul li a
+{
+  color: #727272;
+  font-family: MyriadPro;
+  text-decoration: none;
+  padding: 0px 2px;
+  line-height: 23px;
+  display: block;
+}
+
+section #pagination ul li a:hover
+{
+  color: #000;
+}
+
+section #pagination ul li a.current
+{
+  color: #fff;
+  background: #000;
+  width: 21px;
+  height: 21px;
+}
+
+section #pagination ul li a.prev,
+section #pagination ul li a.next
+{
+  color: #000;
+  margin: 0 10px;
+}
+
+aside#right
+{
+  right: 20px;
+  position: absolute;
+  top: 230px;
+}
+
+aside#right h3
+{
+  font-size: 24px;
+  text-align: right;
+}
+
+aside#right ul
+{
+  list-style: none;
+  margin-top: 20px;
+  text-align: right;
+  margin-bottom: 40px;
+}
+
+aside#right ul li a
+{
+  color: #727272;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+aside#right ul li a.current
+{
+  font-family: MyriadProCondBold;
+}
+
+aside#right p
+{
+  font-size: 17px;
+  text-align: right;
+  width: 206px;
+  font-style: italic;
+  font-family: MyriadPro;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 
-
-/**
- * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+aside#right strong
+{
+  font-size: 21px;
+  color: #727272;
+  float: right;
 }
 
-.footer-heading {
+footer
+{
+  width: 60%;
+  margin: 120px auto 0;
+  position: relative
+}
+
+footer #copy
+{
+  float: right;
+  margin-top: 30px;
+  margin-right: 60px;
+  right: 0;
+  bottom: 0;
+}
+
+footer #copy p
+{
+  text-align: right;
+  color: #b1b1b1;
+  font-size: 18px;
+}
+
+footer #copy p strong
+{
+  font-family: MyriadProCondBold;
+}
+
+footer a#up
+{
+  display: block;
+  color: #fff;
+  background: #000;
+  width: 130px;
+  height: 45px;
+  line-height: 45px;
+  text-decoration: none;
+  text-align: center;
+  position: absolute;
+  right: -45px;
+  -webkit-transform:rotate(-90deg);
+  -moz-transform:rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+@media (min-width: 980px) and (max-width: 1250px) {
+  section article p, section article header
+  {
+    width: 85%;
+  }
+
+  aside#right h3
+  {
     font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
+  }
 
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
+  aside#right ul li a
+  {
     font-size: 20px;
+  }
+
+  aside#right p
+  {
+    width: 160px;
+    font-size: 14px;
+  }
+
+  aside#right strong
+  {
+    font-size: 16px;
+  }
 }
 
-.post-list {
-    margin-left: 0;
-    list-style: none;
+@media (min-width: 670px) and (max-width: 979px) {
+  section {
+    margin: 0;
+    width: 70%;
+    float: right;
+  }
 
-    > li {
-        margin-bottom: $spacing-unit;
-    }
+  section article p, section article header
+  {
+    width: 80%;
+  }
+
+  section article footer
+  {
+    width: 90%;
+  }
+
+  aside#right
+  {
+    position: relative;
+    clear: both;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+  }
+
+  aside#right .box
+  {
+    float: right;
+    width: 220px;
+    margin-top: 30px;
+    margin-right: 10px;
+  }
+
+  aside#right .box p
+  {
+    width: auto;
+  }
+
+  aside#right .box ul li
+  {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  footer
+  {
+    clear: both;
+    margin: 30px auto 0;
+  }
+
+  footer a#up
+  {
+    width: 80px;
+  }
+
+  footer #copy
+  {
+    margin-right: 30px;
+    margin-top: 17px;
+  }
 }
 
-.post-meta {
-    font-size: $small-font-size;
-    color: $grey-color;
-}
+@media (max-width: 669px) {
+  #logo
+  {
+    float: left;
+    max-width: 110px;
+    background-size: 100%;
+    margin: 10px;
+  }
 
-.post-link {
-    display: block;
-    font-size: 24px;
-}
+  h1
+  {
+    float: right;
+    font-size: 16px;
+    margin-right: 1px;
+  }
 
+  nav
+  {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: auto;
+  }
 
+  nav ul li a.active > span,
+  nav ul li a:hover > span
+  {
+    margin-left: -40px;
+  }
 
-/**
- * Posts
- */
-.post-header {
-    margin-bottom: $spacing-unit;
-}
+  section
+  {
+    float: left;
+    width: 100%;
+    padding-left: 0;
+  }
 
-.post-title {
-    font-size: 42px;
-    letter-spacing: -1px;
-    line-height: 1;
+  section article footer
+  {
+    width: 80%;
+  }
 
-    @include media-query($on-laptop) {
-        font-size: 36px;
-    }
-}
+  section article footer a
+  {
+    font-size: 16px;
+  }
 
-.post-content {
-    margin-bottom: $spacing-unit;
+  section article .content
+  {
+    width: 75%;
+  }
 
-    h2 {
-        font-size: 32px;
+  section article p
+  {
+    font-size: 16px;
+    width: auto;
+  }
 
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
+  section article header
+  {
+    font-size: 30px;
+    width: 75%;
+  }
 
-    h3 {
-        font-size: 26px;
+  aside#right
+  {
+    display: none;
+  }
 
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
+  footer a#up
+  {
+    width: 80px;
+  }
 
-    h4 {
-        font-size: 20px;
+  footer #copy
+  {
+    margin-right: 30px;
+    margin-top: 17px;
+  }
 
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
+  footer
+  {
+    clear: both;
+    margin: 0 auto;
+  }
 }

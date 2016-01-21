@@ -1,9 +1,8 @@
 ---
-title:  "Welcome to Jekyll!"
-date:   2015-07-27 17:45:59
-humanized_date: "27 JUL"
+title:  "Welcome to Jekyll #2!"
+date:   2016-01-21 12:41:59
+humanized_date: "21 JAN"
 tags:
-  - jekyll
   - update
 layout: post
 comments: true
