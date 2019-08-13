@@ -155,6 +155,7 @@ p {
 .blog section article:hover {
   background: rgba(236, 242, 255, 0.2);
   border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .blog section article main {

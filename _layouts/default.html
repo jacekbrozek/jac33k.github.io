@@ -135,19 +135,19 @@
             </p>
 
             <section>
-              <article>
+              <article data-href="https://medium.com/@jac33k/exercism-io-challenge-crystal-track-1c2d419b0eb0">
                 <main>
-                  <header>Coming soon</header>
-                  <footer>3 min read • Technology</footer>
+                  <header>Exercism.io challenge — Crystal track</header>
+                  <footer>10 min read • Technology</footer>
                 </main>
                 <aside>
                   <img src="images/arrow-icon.png"/>
                 </aside>
               </article>
-              <article>
+              <article data-href="https://medium.com/@jac33k/exercism-io-challenge-intro-to-polyglot-programming-e4913802b98a">
                 <main>
-                  <header>Coming soon</header>
-                  <footer>3 min read • Technology</footer>
+                  <header>Exercism.io challenge — intro to polyglot programming</header>
+                  <footer>4 min read • Technology</footer>
                 </main>
                 <aside>
                   <img src="images/arrow-icon.png"/>
@@ -218,6 +218,15 @@
         var targetElement = document.getElementsByClassName(targetId)[0];
         targetElement.scrollIntoView({behavior: 'smooth'});
         e.preventDefault();
+      })
+    }
+  </script>
+
+  <script type="text/javascript">
+    var articles = document.getElementsByTagName('article');
+    for(article of articles) {
+      article.addEventListener('click', (e) => {
+        location.href = article.dataset.href;
       })
     }
   </script>
